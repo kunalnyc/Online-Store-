@@ -1,5 +1,6 @@
 import React from 'react'
 import Link from 'next/link'
+import { urlForImage } from '@/sanity/lib/image'
 
 const FooterBanner = ({ footerBanner }) => {
   return (
@@ -18,6 +19,9 @@ const FooterBanner = ({ footerBanner }) => {
             <button type="button">{footerBanner.buttonText}</button>
           </Link>
         </div>
+        <img 
+          src={urlForImage(footerBanner.image)} className="hero-banner-image"
+        />
       </div>
     </div>
   )

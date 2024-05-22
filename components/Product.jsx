@@ -8,7 +8,7 @@ const Product = ({ product: { image, name, slug, price } }) => {
     return (
 
         <div>
-            <Link href={`/products/${slug.current}`} passHref>
+            <Link href={`/product/${slug.current}`} passHref>
                 <div className="product-card">
                     <img
                         src={urlForImage(image && image[0])}
