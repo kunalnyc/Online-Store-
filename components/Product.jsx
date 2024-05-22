@@ -1,7 +1,8 @@
 // components/Product.jsx
 import React from 'react';
 import Link from 'next/link';
-import { urlForImage } from '@/sanity/lib/image';
+
+import { urlFor } from '@/lib/client';
 
 const Product = ({ product: { image, name, slug, price } }) => {
     console.log(slug.current)
@@ -11,7 +12,7 @@ const Product = ({ product: { image, name, slug, price } }) => {
             <Link href={`/product/${slug.current}`} passHref>
                 <div className="product-card">
                     <img
-                        src={urlForImage(image && image[0])}
+                        src={urlFor(image && image[0])}
                         width={250}
                         height={250}
                         className="product-image"
